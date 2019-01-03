@@ -75,7 +75,7 @@ table tbody tr a{
 	color: #bc360a;
 }
 table tbody tr a:hover{
-	color: #d00009;
+	color: #008ddf;
 	text-decoration: underline;
 }  
 /*--------------------------------------------------------------
@@ -226,7 +226,7 @@ a.meanmenu-reveal{display:none}
 .mean-container .mean-nav ul li li li li li a{width:50%;padding:1em 25%}
 .mean-container .mean-nav ul li a:hover {
   background: #f8f8f8 none repeat scroll 0 0;
-  color: #D00009;
+  color: #008ddf;
 }
 .mean-container .mean-nav ul li a.mean-expand{
   width:26px;
@@ -383,6 +383,7 @@ a.meanmenu-reveal{display:none}
 }
 .blog-single-area ol.comment-list {
     margin-left: 0;
+    list-style: none;
     padding-left: 0;
 }
 .blog-single-area ol.comment-list li figure {
@@ -560,7 +561,7 @@ a {
 	text-decoration: none;
 }
 a:hover {
-	color: #d00009;
+	color: #008ddf;
 	text-decoration: none;
 	-webkit-transition: all 0.5s ease 0s;
 	transition: all 0.5s ease 0s;
@@ -635,6 +636,7 @@ ul {
 ---------------------------------------*/
 .main-header-area {
 	background: #000;
+    margin-bottom: -1px;
 }
 .main-header-area .logo-area {
 	padding: 34px 0;
@@ -652,41 +654,10 @@ ul {
 	position: relative;
 	transition: all 0.5s ease 0s;
 	position: relative
-}
-.main-header-area .main-menu ul li:after {
-	background: #d00009;
-	display: block;
-	content: "";
-	height: 2px;
-	position: absolute;
-	bottom: 20px;
-	left: 0px;
-	width: 100%;
-	border-radius: 2px;
-	transition: all .2s ease-in-out;
-	opacity: 0
-}
-.main-header-area .main-menu ul li.active:after {
-	background: #d00009;
-	display: block;
-	content: "";
-	height: 2px;
-	position: absolute;
-	bottom: 20px;
-	left: 0px;
-	width: 100%;
-	border-radius: 2px;
-	transition: all .2s ease-in-out;
-	opacity: 1
-}
-.main-header-area .main-menu ul li:hover:after {
-	opacity: 1;
-}
-.main-header-area .main-menu ul li ul.sub-menu li:hover:after{
-	opacity: 0;
-}
-.main-header-area .main-menu ul li:hover a {
-	color: #bfbfbf;
+}    
+.main-header-area .main-menu ul li.current-menu-item,
+.main-header-area .main-menu ul li:hover {
+	background: #008DDF;
 }
 .main-header-area .main-menu ul li:last-child{
 	padding-right: 0;
@@ -755,7 +726,7 @@ ul {
     visibility: visible;
 } 
 .main-header-area .main-menu ul li ul li a:hover {
-	color:  #d00009;
+	color:  #008ddf;
 }
 .main-header-area .main-menu ul li ul li:last-child {
 	border-bottom: 0px;
@@ -774,8 +745,8 @@ ul {
 	font-weight: 600
 } 
 .heading-cmn-area {
-    padding: 140px 20px;
-    color: #d00009;
+    padding: 40px 20px;
+    color: #008ddf;
     font-family: raleway;
 }
 .heading-cmn-area h2 {
@@ -783,6 +754,7 @@ ul {
     font-size: 48px;
     font-weight: bold;
     margin-bottom: 10px;
+    text-align: center;
 }
 .header-page-locator ul li {
     font-weight: 600;
@@ -795,8 +767,7 @@ ul {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-}
-
+}  
 /*-------------------------------
 	Latest Blog
 --------------------------------*/
@@ -855,13 +826,14 @@ button.sl-prev .fa, button.sl-next .fa {
 	font-weight: 600;
 	margin-top: 30px;
 }
+.blog-des-bx h5.info,
 .latest-blog-area .blog-box p.info {
     color: #555;
     font-size: 12px;
     margin-bottom: 25px;
 }
 .latest-blog-area .blog-box p i {
-	color: #d00009;
+	color: #008ddf;
 	margin-right: 10px;
 } 
 div#content {
@@ -873,10 +845,7 @@ div#content {
 --------------------------------*/
 .saloncer-area {
 	margin: 100px 0px;
-} 
-.widget-area{
-	padding-left: 25px;
-}
+}  
 .sidebar-area section {
 	margin-bottom: 40px;
 	color: #222;
@@ -892,17 +861,23 @@ div#content {
 }
  
 .sidebar-area .widget_search input {
-	width: 100%;
-    border: 1px solid #fff;
-    padding: 10px;
-    background: #fff url(img/search.png) right 10px center no-repeat;
+    border: 0;
+    width: 100%;
+    padding: 10px; 
+    border-bottom: 1px solid #008ddf;
 }
 .sidebar-area .widget-area ul li a{
 	font-weight: 600;
 }
 .sidebar-area ul li i {
-	color: #d00009;
+	color: #008ddf;
 	margin-right: 10px;
+}
+.sidebar-area .widget-area a{
+	color: #008ddf;
+}
+.sidebar-area .widget-area a:hover{
+	color: #45bf73;
 }
 .sidebar-area .widget_search input:focus{
 	outline: none; 
@@ -995,11 +970,11 @@ span.post-date {
 	font-size: 14px !important;
 }
 .sidebar-area .widget_tag_cloud a:hover {
-	background: #d00009;
+	background: #008ddf;
 	color: #fff;
 }
 .sidebar-area .widget_tag_cloud a.active {
-	background: #d00009;
+	background: #008ddf;
 	color: #fff;
 }
 .side-bar-ad {
@@ -1035,12 +1010,12 @@ span.post-date {
 	font-weight: bold;
 	color: #fff;
 	display: inline-block;
-	background: #d00009;
+	background: #008ddf;
 	padding: 10px 24px;
 	text-transform: uppercase;
 }
 .side-bar-ad div a:hover {
-	color: #d00009;
+	color: #008ddf;
 	background: #fff;
 }
 .shop-product .pagination-area {
@@ -1080,29 +1055,26 @@ span.post-date {
 .blog-area-content .pagination-area ul {
 	margin-bottom: 0px
 } 
-.blog-single-area .blog-des-bx {
-	border-bottom: 1px solid #ccc;
-	margin-bottom: 20px;
-	padding-bottom: 40px;
+.blog-single-area .blog-des-bx {  
+	margin-bottom: 35px; 
 }
 .blog-single-area .blog-des-bx > h2 {
-	font-size: 24px;
-	font-weight: bold;
-	margin-top: 30px;
+    font-size: 30px;
+    font-weight: 300;
 }
 .blog-single-area .blog-des-bx > h5 {
-	color: #646464;
-	position: relative;
-	margin-bottom: 50px;
+    color: #555;
+    font-size: 12px;
+    margin-bottom: 25px;
 }
 .pagination>li>a, .pagination>li>span{
-	color: #d00009;
+	color: #008ddf;
 }
 .pagination span.page-numbers{ 
 	padding: 10px;
     font-size: 18px;
     line-height: 1.3333333; 
-	color: #d00009;
+	color: #008ddf;
     border: 0;
     margin-left: -1px;
     position: relative;
@@ -1120,30 +1092,20 @@ span.post-date {
 .pagination>li>a.active{
     background-color: transparent;
     border-color: transparent;
-	color: #d00009;
-}
-.blog-single-area .blog-des-bx > h5.btm:after {
-	background: #d00009 none repeat scroll 0 0;
-	bottom: -21px;
-	content: "";
-	display: block;
-	height: 3px;
-	left: 0;
-	position: absolute;
-	width: 55px;
-}
+	color: #008ddf;
+} 
 .blog-des-bx > h5.dflt:after{
 	display: none;
 }
 .blog-single-area .blog-des-bx > h5 span {
-	color: #d00009
+	color: #008ddf
 }
 .blog-single-area .blog-des-bx > h5 i {
-	color: #d00009;
+	color: #008ddf;
 	margin-right: 10px;
 }
 .blog-single-area .blog-des-bx .blog-indent {
-	border-left: 2px solid #d00009;
+	border-left: 2px solid #008ddf;
 	font-size: 18px;
 	font-style: italic;
 	line-height: 30px;
@@ -1167,19 +1129,15 @@ span.post-date {
 	margin: 0 2px;
 	text-align: center;
 	width: 30px;
-	color: #d00009
+	color: #008ddf
 }
 .blog-single-area .blog-share-bx .blog-social-bx li a:hover {
 	color: #222;
-	border-color: #d00009
+	border-color: #008ddf
 }
 .blog-single-area .blog-share-bx {
 	margin-bottom: 40px;
-}
-.blog-single-area .blog-author-bx section {
-	border: 1px solid #ccc;
-	padding: 30px;
-}
+} 
 .blog-single-area .blog-author-bx > h3 {
 	font-size: 20px;
 	font-weight: 700;
@@ -1199,16 +1157,18 @@ span.post-date {
 	position: relative
 }
 .blog-single-area .blog-author-bx .cbox h4:first-child {
-	color: #d00009;
+	color: #008ddf;
 	font-family: raleway;
 	font-size: 18px;
 	font-weight: 600;
 	margin-bottom: 18px;
 }
 .blog-single-area .blog-recent-bx {
-	margin-top: 40px;
-	padding-bottom: 10px;
-	overflow: hidden;
+    margin-top: 40px;
+    padding-bottom: 38px;
+    display: block;
+    background: #fff;
+    padding: 35px 35px 15px;
 }
 .blog-single-area .blog-recent-bx section {
 	border: none;
@@ -1225,7 +1185,7 @@ span.post-date {
 	top: 0px;
 }
 .blog-single-area .blog-recent-bx section span i {
-	color: #d00009;
+	color: #008ddf;
 	transform: rotate(-180deg)
 }
 .blog-single-area .blog-comment-bx > h3 {
@@ -1322,11 +1282,7 @@ ol.comment-list .comment-respond.blog-comment-bx{
 }
 ol.comment-list .comment-respond.blog-comment-bx textarea#comment{
 	margin: 15px 0;
-}
-.comment-respond.blog-comment-bx h3{
-	border-top: 1px solid #ccc;
-	padding-top: 25px;
-}
+} 
 ol.comment-list .comment-respond.blog-comment-bx a#cancel-comment-reply-link {
     float: right;
     padding-top: 8px;
@@ -1339,20 +1295,18 @@ ol.comment-list .comment-respond.blog-comment-bx a#cancel-comment-reply-link {
 	text-align: center;
 }
 .error-content-area .error-bx1 {
-	background: #d00009 none repeat scroll 0 0;
+	background: #fff none repeat scroll 0 0;
 	padding: 30px 0px 50px;
 	text-align: center;
 }
 .error-content-area .error-bx1 h1 {
 	font-size: 250px;
 	font-weight: 700;
-	color: #fff;
+	color: #008ddf;
 	margin-bottom: 0px;
 }
 .error-content-area .error-bx1 h4 {
-	font-size: 30px;
-	color: #fff;
-	letter-saloncing: 3px;
+	font-size: 30px;  
 }
 .error-content-area figure{
 	display: inline-block;
@@ -1375,12 +1329,12 @@ ol.comment-list .comment-respond.blog-comment-bx a#cancel-comment-reply-link {
 	margin-top: 20px;
 }
 .error-content-area figure p a:hover {
-	background: #d00009
+	background: #008ddf
 } 
 .cmn-btn1 {
 	text-transform: uppercase;
 	color: #fff;
-	background: #d00009;
+	background: #008ddf;
 	padding: 10px 50px;
 	border: none;
 	font-weight: bold;
@@ -1426,8 +1380,8 @@ ol.comment-list .comment-respond.blog-comment-bx a#cancel-comment-reply-link {
 }
 .post-password-form input[type="submit"]:hover,
 .not-found .page-content .search-submit:hover{
-	border-color:  #d00009; 
-	color:  #d00009; 
+	border-color:  #008ddf; 
+	color:  #008ddf; 
 }
 .comment-list .cbox ul,
 .blog-des-bx ul{
@@ -1507,7 +1461,7 @@ ol.comment-list .comment-respond.blog-comment-bx a#cancel-comment-reply-link {
 	text-transform: uppercase;
 }
 .footer-top-area .main-footer .single-footer h3::after {
-	background: #d00009;
+	background: #008ddf;
 	border-radius: 3px;
 	content: "";
 	display: block;
@@ -1542,10 +1496,10 @@ ol.comment-list .comment-respond.blog-comment-bx a#cancel-comment-reply-link {
 	text-align: center;
 }
 .footer-top-area .main-footer .single-footer .footer-social-media-area ul li a:hover {
-	color: #d00009;
+	color: #008ddf;
 }
 .footer-top-area .main-footer .single-footer .footer-social-media-area ul li a:hover i {
-	color: #d00009;
+	color: #008ddf;
 }
 .footer-top-area .main-footer .footer-two ul li {
 	display: block;
@@ -1570,7 +1524,7 @@ ol.comment-list .comment-respond.blog-comment-bx a#cancel-comment-reply-link {
 	font-weight: 600;
 }
 .footer-top-area .main-.footer-three ul li i {
-	color: #d00009;
+	color: #008ddf;
 	margin: 0 15px 0 0;
 	text-align: center;
 	width: 16px;
@@ -1615,7 +1569,7 @@ ol.comment-list .comment-respond.blog-comment-bx a#cancel-comment-reply-link {
 	color: #ddd;
 } 
 a.scrollToTop {
-    border: 1px solid #d00009;
+    border: 1px solid #008ddf;
     padding: 7px 14px;
     position: fixed;
     bottom: 100px;
@@ -1646,46 +1600,31 @@ a.scrollToTop {
 .short-content{
 	font-weight: 400 !important;
 }
-
-/*-------------------------------------
-	WooCommerce
--------------------------------------*/
-
-.woocommerce ul.products li.product .add_to_cart_button{
-	padding: 15px 40px; 
+.blog-author-bx{
+	background: #fff;
+	padding: 35px; 
 }
-.woocommerce ul.products li.product .woocommerce-loop-category__title, 
-.woocommerce ul.products li.product .woocommerce-loop-product__title, 
-.woocommerce ul.products li.product h3{
-	font-weight: 700;
+.blog-single-area .blog-des-bx,
+.blog-comment-bx,
+.blog-image-bx {
+    background: #fff;
+    padding: 35px 35px 15px;
 }
-.woocommerce .product .onsale {
-    background: #000; 
-    width: 42px; 
+.blog-image-bx{
+	padding-bottom: 0;
 }
-.woocommerce .top {
-    overflow: hidden;
+.comment-respond.blog-comment-bx {
+    margin-top: 35px;
+}
+.blog-des-bx img {
     margin-bottom: 30px;
 }
-.woocommerce .woocommerce-breadcrumb{
-	margin-bottom: 30px;
+.no-results.not-found,
+.sidebar-area .widget-area .widget {
+    background: #fff;
+    padding: 30px;
 }
-.woocommerce div.product p.price, .woocommerce div.product span.price{
-	color: #000;
-}
-.woocommerce .quantity .qty { 
-    height: 35px;
-}
-.single-product-tab-nav .nav-tabs{
-	margin-bottom: 20px;
-} 
-section.related.products {
-    margin-top: 60px;
-}
-.woocommerce .woocommerce-ordering select { 
-    height: 40px;
-    margin-top: -10px;
-}
-.woocommerce .woocommerce-ordering {
-    margin: 0 0 3em;
+.blog-area-content .col-lg-9.col-md-9,
+.blog-single-area .col-lg-9.col-md-9 {
+    padding-right: 25px;
 }

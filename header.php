@@ -52,25 +52,8 @@ wp_head(); ?>
 	</header>
 	<!-- header area end here --> 
     
-    <?php 
-
-    if(is_page()){ 
-    	$divine_salon_hdr_img_id = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()),'full',true); 
-    	if(has_post_thumbnail()){
-    		$divine_salon_hdr_img = 1;
-    	}else{
-    		$divine_salon_hdr_img = 0;	
-    	}
-    }else{
-    	if(get_header_image()){
-    		$divine_salon_hdr_img = 1;
-    	}else{
-    		$divine_salon_hdr_img = 0;	
-    	}
-    		
-    }
-    if($divine_salon_hdr_img==1){ 
+    <?php  
     	get_template_part('banner'); 
-	} ?>  
+	?>  
  
 	<div id="content" class="site-content">

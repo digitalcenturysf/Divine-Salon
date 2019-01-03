@@ -12,7 +12,7 @@ get_header(); ?>
 			<div class="blog-area-content saloncer-area">
 			  <div class="container">
 			    <div class="row"> 
-			      <div class="col-lg-8 col-md-8 latest-blog-area">
+			      <div class="col-lg-9 col-md-9 latest-blog-area">
 			        <div class="blog-box"> 
 						<?php
 						if ( have_posts() ) :  
@@ -33,7 +33,7 @@ get_header(); ?>
 			        <div class="clearfix"></div>
 			        <?php divine_salon_pagination(); ?> 
 			      </div> 
-				   <div class="col-lg-4 col-md-4 sidebar-area">
+				   <div class="col-lg-3 col-md-3 sidebar-area">
 				       <?php get_sidebar(); ?>
 				   </div> 
 			    </div>

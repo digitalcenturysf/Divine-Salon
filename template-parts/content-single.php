@@ -43,13 +43,13 @@ if ( is_singular() && $numpages > 1 ) {
  ?>
 </div>
 <?php if(has_tag()): ?>
-<div class="blog-share-bx">
-  <div class="row">
-    <div class="col-lg-6 col-md-6 tag-bx">
-      <span> <?php esc_html_e('Tags','divine-salon'); ?>:</span> <?php the_tags( '', ', ', '' ); ?> 
-    </div> 
+  <div class="blog-share-bx">
+    <div class="row">
+      <div class="col-lg-6 col-md-6 tag-bx">
+        <span> <?php esc_html_e('Tags','divine-salon'); ?>:</span> <?php the_tags( '', ', ', '' ); ?> 
+      </div> 
+    </div>
   </div>
-</div>
 <?php endif; ?>
 <?php 
 $divine_salon_author = get_the_author_meta('description');

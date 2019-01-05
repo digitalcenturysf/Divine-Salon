@@ -20,35 +20,35 @@ wp_head(); ?>
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 	<header>
-	  <div class="main-header-area">
-	    <div class="container">
-	      <div class="row">
-	        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
-	          <div class="logo-area"> 
-	          	<?php divine_salon_logo(); ?> 
-	          </div>
-	        </div> 
-	        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
-	          <div class="main-menu">
-	            <?php divine_salon_main_menu(); ?>
-	          </div>
-	        </div>  
-	      </div>
-	    </div>
-	  </div>
-	  <div class="mobile-menu-area">
-	    <div class="container">
-	      <div class="row">
-	        <div class="col-md-12">
-	          <div class="mobile-menu">
-	            <nav id="dropdown">
-	             	<?php divine_salon_main_menu(); ?>
-	            </nav>
-	          </div>
-	        </div>
-	      </div>
-	    </div>
-	  </div>
+		<div class="main-header-area">
+		    <div class="container">
+		      	<div class="row">
+			        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+			          	<div class="logo-area"> 
+			          		<?php divine_salon_logo(); ?> 
+			          	</div>
+			        </div> 
+			        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
+			          	<div class="main-menu">
+			            	<?php divine_salon_main_menu(); ?>
+			          	</div>
+			        </div>  
+			      	</div>
+		    	</div>
+		  </div>
+		  <div class="mobile-menu-area">
+		    <div class="container">
+		      	<div class="row">
+		        	<div class="col-md-12">
+		          		<div class="mobile-menu">
+		            		<nav id="dropdown">
+		             			<?php divine_salon_main_menu(); ?>
+		            		</nav>
+		          		</div>
+		        	</div>
+		      	</div>
+		    </div>
+		</div>
 	</header>
 	<!-- header area end here --> 
     

@@ -32,7 +32,7 @@ function divine_salon_setup() {
 	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 	 */
 	add_theme_support( 'post-thumbnails' );
-	add_image_size( 'divine-salon-thumb', 680,390,true ); 
+	add_image_size( 'divine-salon-thumb', 770,390,true ); 
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
@@ -138,7 +138,7 @@ function divine_salon_scripts() {
 	wp_enqueue_style( 'divine-salon-responsive', DIVINE_SALON_CSS . 'responsive.css' ); 
 
 	wp_enqueue_script( 'modernizr', DIVINE_SALON_JS . 'modernizr.js', array('jQuery'), '2.8.3', false ); 
-	wp_enqueue_script( 'bootstrap', DIVINE_SALON_JS . 'bootstrap.js', array('jquery','jquery-masonry'), '3.3.5', true );
+	wp_enqueue_script( 'bootstrap', DIVINE_SALON_JS . 'bootstrap.js', array('jquery-masonry'), '3.3.5', true );
 	wp_enqueue_script( 'meanmenu', DIVINE_SALON_JS . 'jquery.meanmenu.js', array(), '2.0.8', true );  
 	wp_enqueue_script( 'divine-salon-main', DIVINE_SALON_JS . 'main.js', array(), '1.0', true );
 	wp_enqueue_script( 'divine-salon-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
@@ -348,7 +348,7 @@ add_action( 'widgets_init', 'divine_salon_widgets_init' );
  */ 
 function divine_salon_breadcrumb(){
 	global $post,$dcsf_divine;	
-	$dcsf_divine_blog_title=  esc_html__('Blog','divine-salon');
+	$dcsf_divine_blog_title=  esc_html__('A Clean WordPress Theme','divine-salon');
 	if(is_front_page() && is_home()){ 
 		echo esc_html($dcsf_divine_blog_title); 
 
@@ -362,36 +362,18 @@ function divine_salon_breadcrumb(){
 	}elseif(is_single()){
 		the_title();
 	}elseif(is_search()){    
-		echo '<span>'.get_search_query().'</span>'; 
+		echo get_search_query(); 
 	}elseif(is_category() || is_tag()) {
 		single_cat_title("", true);
-	}elseif(is_archive()){ 
-		if ( class_exists('WooCommerce' ) ){
-			if(is_shop() || is_product_category() || is_product_tag() ){
-				woocommerce_page_title(); 
-			}else{ 
-				echo get_the_date('F Y'); 
-			} 
-		}else{ 
-			echo get_the_date('F Y'); 
-		}
+	}elseif(is_archive()){  
+		echo get_the_date('F Y');  
 	}elseif(is_404()){ 
 		esc_html_e('404 Error','divine-salon');
 	}else{ 
 		the_title();
 	}
 }
-
-/**
- * Change number or products per row to 3
- */
-add_filter('loop_shop_columns', 'divine_salon_loop_columns');
-if (!function_exists('divine_salon_loop_columns')) {
-	function divine_salon_loop_columns() {
-		return 3;  
-	}
-}
-
+ 
 /**
  * Implement the Custom Header feature.
  */
